@@ -17,7 +17,8 @@ public class InstancedMeshRendering : MonoBehaviour
 
     MaterialPropertyBlock materialPropertyBlock;
     MeshRenderer meshRenderer;
-  
+    void Start() => SetPropertyBlock();
+    
     public void SetPropertyBlock()
     {
         if (meshRenderer == null) // make it work in editor
