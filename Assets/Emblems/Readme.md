@@ -12,16 +12,8 @@ Originally this system was designed for a canvas based UI system, but for the pu
 Emblem elements like shield, symbol and banner shape are read from texture array: 
 https://user-images.githubusercontent.com/16105403/200170379-11d9d77b-212e-421b-9d8a-62bd7950c7bf.mp4
 
-
-
-
-
 Texture arrays hold signed distance field (SDF) textures for each element. SDF texture are genereated in Photoshop with stroke effect.
-
-
 Indexing of the texture array for the canvas variant is done by writing the index values into vertex attributes, namely into additional UV channels.
-
-
 
 ```
 SetIndexAsUV.cs
@@ -41,6 +33,10 @@ public override void ModifyMesh(VertexHelper vh)
 ```
 
 For the mesh variant index are passed through a property block to support GPU instancing.
+
+Which shader variant is used is determined by the keyword: `INDEX_FROM_VERTEX_DATA`
+
+Shader also supports 32 different colors for each element, which can be read either from lut texture or from hardcoded color values defined in the shader, and up to 5 different flag schemes (easily extendable to more).
 
 
 
