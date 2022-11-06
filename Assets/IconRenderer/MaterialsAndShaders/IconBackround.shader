@@ -133,7 +133,7 @@ Shader "IconRender/Background"
                     float vignette = vignetteUV.x*vignetteUV.y * _VignetteIntensity; 
                     vignette = saturate(pow(vignette, _VignetteExtend)); 
 
-                    float4 col = saturate(col1) + rays;
+                    float4 col = saturate(col1 + rays) ;
                     float4 whiteGlow = tex2D(_WhiteGlow, i.uv);
                     float4 rays2 = BlendLinearDodge(rays , whiteGlow * _GlowColor , _GlowOpacity);
                     col = lerp(col, rays2, rays2);
