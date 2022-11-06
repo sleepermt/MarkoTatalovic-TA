@@ -3,7 +3,8 @@
 Scene: Emblems.unity   
 Note: Please set the display resolution in Game preview window to 2048x2048 so both mesh and canvas emblems are visible. On the left side are mesh emblems, on the right side are canvas emblems.
 
-<img src = "https://user-images.githubusercontent.com/16105403/200170973-96715f15-215c-4677-8125-d32199514080.png" width=25% height=25%>
+<img src = "https://user-images.githubusercontent.com/16105403/200170973-96715f15-215c-4677-8125-d32199514080.png" width=25% height=25%><img src = "https://user-images.githubusercontent.com/16105403/200192051-930dd0c1-b3bc-4e80-ba7e-c2fc24ea3bc3.png" width=40% height=40%>
+
 
 
 ## General:
