@@ -112,13 +112,7 @@ Shader "UI/Highlight"
                     
                     min(max(q.x,q.y),0.0) + length(max(q,0.0)) - r );
             }
-            float2 polarCoord(float2 pos, float RadialScale, float LengthScale)
-            {
-                float radius = length(pos) * 2 * RadialScale;
-                float angle = atan2(pos.x, pos.y) * 1.0/6.28 * LengthScale;
-                return float2(radius, angle);
-            }
-
+            
             fixed4 frag(v2f IN) : SV_Target
             {
                 half4 color = (tex2D(_MainTex, IN.texcoord) + _TextureSampleAdd) * IN.color;
