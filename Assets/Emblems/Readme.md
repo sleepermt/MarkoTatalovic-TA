@@ -9,9 +9,15 @@ Customizable emblem system that enables players to create emblems with custom co
 Originally this system was designed for a canvas based UI system, but for the purposes of this demo it was addapted to also work with mesh objects. For both variants the same shader file is used, and they both support rendering virtualy infinite amount of emblems on the screen in one draw call.
 
 ## How it works:
-Emblem elements like shield, symbol and banner shape are read from texture array: [texture array](../../ReadmeData/5612b0c535a8e7341302c0334db2d467%20(1).mp4)
+Emblem elements like shield, symbol and banner shape are read from texture array: 
+https://user-images.githubusercontent.com/16105403/200170379-11d9d77b-212e-421b-9d8a-62bd7950c7bf.mp4
+
+
+
+
 
 Texture arrays hold signed distance field (SDF) textures for each element. SDF texture are genereated in Photoshop with stroke effect.
+
 
 Indexing of the texture array for the canvas variant is done by writing the index values into vertex attributes, namely into additional UV channels.
 
