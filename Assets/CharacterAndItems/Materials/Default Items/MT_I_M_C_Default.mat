@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: MT_I_M_C_Default
   m_Shader: {fileID: 4800000, guid: e3a3d94740d0fcf4d8d098bb9a8f0775, type: 3}
-  m_ShaderKeywords: RIM_LIGHT SPECULAR TANGENT_NORMAL _NORMALMAP
+  m_ShaderKeywords: RIM_LIGHT SECONDARY_COLOR SPECULAR TANGENT_NORMAL _NORMALMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -113,7 +113,7 @@ Material:
     - _RIM_LIGHT: 0
     - _RimEdgeSize: 0.072
     - _RimSize: 0.212
-    - _SECONDARY_COLOR: 0
+    - _SECONDARY_COLOR: 1
     - _SHADOW_COLOR: 0
     - _SPECULAR: 0
     - _SPECULAR_COLOR: 0
