@@ -3,6 +3,9 @@
 Scene: Emblems.unity   
 Note: Please set the display resolution in Game preview window to 2048x2048 so both mesh and canvas emblems are visible. On the left side are mesh emblems, on the right side are canvas emblems.
 
+<img src = "https://user-images.githubusercontent.com/16105403/200170973-96715f15-215c-4677-8125-d32199514080.png" width=25% height=25%>
+
+
 ## General:
 Customizable emblem system that enables players to create emblems with custom color patterns, shield and banner shapes using SDF shader techniques. SDF approach was used to avoid any scaling issues at different device resolutions that emblems would otherwise have with common raster options. 
 
