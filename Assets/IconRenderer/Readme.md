@@ -1,6 +1,7 @@
 # Icon Renderer
 
 Scene: IconRenderer.unity
+
 Note: Please set the display resolution in Game preview window to 512x512
 This is an extracted version of the code, renderTexture sizes are hardcoded to 512x512 to avoid running out of memory issues on your machine.
 Its supposed to be used in Editor
