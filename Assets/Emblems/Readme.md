@@ -13,6 +13,7 @@ Originally this system was designed for a canvas based UI system, but for the pu
 
 ## How it works:
 Emblem elements like shield, symbol and banner shape are read from texture array: 
+
 https://user-images.githubusercontent.com/16105403/200170379-11d9d77b-212e-421b-9d8a-62bd7950c7bf.mp4
 
 Texture arrays hold signed distance field (SDF) textures for each element. SDF texture are genereated in Photoshop with stroke effect.
