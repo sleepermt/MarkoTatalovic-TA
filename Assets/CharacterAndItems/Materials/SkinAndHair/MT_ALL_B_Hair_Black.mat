@@ -1,0 +1,155 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: MT_ALL_B_Hair_Black
+  m_Shader: {fileID: 4800000, guid: e3a3d94740d0fcf4d8d098bb9a8f0775, type: 3}
+  m_ShaderKeywords: TANGENT_NORMAL
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AmbientMap:
+        m_Texture: {fileID: 2800000, guid: 86766d00cbed7c74fa196daca44c8e10, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CurvatureMap:
+        m_Texture: {fileID: 2800000, guid: 2a3554b8c6476884a9cf356d745e5300, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DiffuseDetailMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _HSV:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Mask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MatCap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalAoCurvature:
+        m_Texture: {fileID: 2800000, guid: e1f8f0a4408c1c44a9aede8234f87671, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalAoCurveMask:
+        m_Texture: {fileID: 2800000, guid: e48ac4a7e15881c4d87175667474fdd0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 2800000, guid: efbfe26bb71329940a5a4d91188cdec2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _BumpScale: 1
+    - _Cutoff: 0.5
+    - _DEBUG: 0
+    - _DIFFUSE_DETAIL: 0
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _FacialFeaturesId: 0
+    - _Flatness: 1
+    - _GRADIENT: 0
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _GradientSize: 0
+    - _HideChestIndex: 0
+    - _HideLegsIndex: 0
+    - _Metallic: 0
+    - _Mode: 0
+    - _NO_OUTLINE: 0
+    - _OcclusionStrength: 1
+    - _OutlineColor: 0.5
+    - _OutlineWidth: 0
+    - _Parallax: 0.02
+    - _RIM_LIGHT: 0
+    - _RimEdgeSize: 0.5
+    - _RimSize: 0.5
+    - _SECONDARY_COLOR: 0
+    - _SHADOW_COLOR: 0
+    - _SPECULAR: 0
+    - _SPECULAR_COLOR: 0
+    - _SUBSURFACE: 0
+    - _ShadingSize: 0.571
+    - _ShadowEdgeSize: 0.233
+    - _SmoothnessTextureChannel: 0
+    - _SpecularEdgeSize: 0.559
+    - _SpecularHighlights: 1
+    - _SpecularPower: 0.04
+    - _SpecularSize: 0.795
+    - _SrcBlend: 1
+    - _SubsurfacePower: 1
+    - _SubsurfaceScale: 3.3
+    - _UVSec: 0
+    - _ZWrite: 1
+    - _matcapStrength: 0
+    - _useCharacterFeatures: 0
+    - _useMatcap: 0
+    - _useTangentNormal: 1
+    m_Colors:
+    - _BaseColor: {r: 0.2264151, g: 0.2264151, b: 0.2264151, a: 0.85056}
+    - _BeardColor: {r: 0, g: 0, b: 0, a: 1}
+    - _Color: {r: 0.16981131, g: 0.16981131, b: 0.16981131, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _OutlineColor: {r: 0.022561418, g: 0.3679245, b: 0.022561418, a: 1}
+    - _PrimaryColor: {r: 0.16862746, g: 0.16862746, b: 0.16862746, a: 0.85056}
+    - _PrimarySubsurfaceColor: {r: 0.3019608, g: 0.20784314, b: 0.20784314, a: 0.85056}
+    - _RimColor: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
+    - _SecondaryColor: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
+    - _SecondarySubsufraceColor: {r: 0.3019608, g: 0.20784314, b: 0.20784314, a: 0.85056}
+    - _ShadowColor: {r: 0.6132076, g: 0.5929602, b: 0.5929602, a: 0.85056}
+    - _SpecularColor: {r: 0.9528302, g: 0.5618103, b: 0.5618103, a: 0.85056}
+    - _SubsurfaceColor: {r: 0.3018868, g: 0.20647919, b: 0.20647919, a: 0.85056}
+  m_BuildTextureStacks: []
