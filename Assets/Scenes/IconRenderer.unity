@@ -373,19 +373,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3c9fc9599d2898428a0192e963c8477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundColor: {r: 0.24718204, g: 0.07075472, b: 0.2830189, a: 1}
+  backgroundColor: {r: 0.18081753, g: 0, b: 0.21698111, a: 1}
   glowColor: {r: 0.9189131, g: 0.9245283, b: 0.06541473, a: 1}
   backgroundDirtTexture: {fileID: 2800000, guid: 284e52cd45884174fb8dac9aaf8e51b8, type: 3}
   lightRaysTexture: {fileID: 2800000, guid: 4daf20ea9ad346d4790a13dbff28acb9, type: 3}
-  dirtStrength: 0.379
-  glowSize: 0.09
-  glowOpacity: 0.737
+  dirtStrength: 0.392
+  glowSize: 0.059
+  glowOpacity: 0.643
   iterations: 9
   vignetteIntensity: 96.7
-  vignetteExtent: 0.325
+  vignetteExtent: 0.912
   outlineWidth: 0.007
   hue: 0
   saturation: 0
   luminance: 0
   brightness: 0
-  contrast: 17.9
+  contrast: 0

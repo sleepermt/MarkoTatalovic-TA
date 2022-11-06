@@ -17,25 +17,22 @@ public class IconRenderer : MonoBehaviour
     [Range(1, 100)] public float vignetteIntensity = 40f;
     [Range(0, 1)] public float vignetteExtent = 0.2f;
     [Range(0, 1)] public float outlineWidth = 1.0f;
-    Material iconMaterial;
+    static Material iconMaterial;
     int renderTextureSize = 512;
-    static int writeMaskPass = 0;
-    static int writeOutline  = 1;
-    static int guassianBlurPass = 2;
-    static int compositePass = 3;
+    const int writeMaskPass = 0;
+    const int writeOutline  = 1;
+    const int guassianBlurPass = 2;
+    const int compositePass = 3;
     [Range(-1, 1)] public float hue = 0;
     [Range(-1, 1)] public float saturation = 0;
     [Range(-1, 1)] public float luminance = 0;
     [Range(-100, 100)] public float brightness = 0;
     [Range(-100, 100)] public float contrast = 0;
-    
-    int colorIdx = 0;
-    string savePath = "Assets/Art/Icons/";
+    const string savePath = "Assets/IconRenderer/Export/";
     Texture2D RTImage(Camera camera)
     {
         var currentRT = RenderTexture.active;
         RenderTexture target = new RenderTexture(512, 512, 24, RenderTextureFormat.Default);
-        target.antiAliasing = 0;
         target.Create();
 
         RenderTexture.active = target;
@@ -53,17 +50,15 @@ public class IconRenderer : MonoBehaviour
         return image;
     }
 
-    public async void Render()
+    public void Render()
     {
-        // var image = RTImage(Camera.main);
-        // var path = savePath + "IC_" + child.gameObject.name.Substring(3) + "_" + i.ToString() + ".png";
-        // File.WriteAllBytes(path, image.EncodeToPNG());   
+        var image = RTImage(Camera.main);
+        var path = savePath + "Example.png";
+        File.WriteAllBytes(path, image.EncodeToPNG());   
     }
 
     void OnRenderImage (RenderTexture source, RenderTexture destination)
     {
-        //renderTextureSize = source.width;
-
         if (iconMaterial == null)
         {
             iconMaterial = new Material(Shader.Find("IconRender/Background"));
@@ -75,7 +70,6 @@ public class IconRenderer : MonoBehaviour
 
         RenderTexture[] textures = new RenderTexture[16];
         RenderTexture currentDestination = textures[0] = RenderTexture.GetTemporary(renderTextureSize, renderTextureSize, 0, source.format);
-        //currentDestination.antiAliasing = 0;
 
         iconMaterial.SetFloat("_OutlineWidth", glowSize);
         iconMaterial.SetColor("_OutlineColor", Color.white);
@@ -85,15 +79,11 @@ public class IconRenderer : MonoBehaviour
         RenderTexture.ReleaseTemporary(mask);
 
         RenderTexture cSource = currentDestination;
-        
-        
         int width = renderTextureSize;
         int height = renderTextureSize;
 
         int i = 1;
-        
         iconMaterial.SetVector("_direction", new Vector2(1.0f, 0.0f));
-        //iterations = 9;
         for (; i < iterations; i++) {
             if (i % 3 == 0)
             {
@@ -108,20 +98,15 @@ public class IconRenderer : MonoBehaviour
                 iconMaterial.SetVector("_direction", new Vector2(1.0f, 0.0f));
 
             currentDestination = textures[i] = RenderTexture.GetTemporary(width, height, 0, source.format);
-            //currentDestination.antiAliasing = 0;
             Graphics.Blit(cSource, currentDestination, iconMaterial, guassianBlurPass);
             cSource = currentDestination;
         }
-        
-
 
         RenderTexture modelWithOutline = RenderTexture.GetTemporary(renderTextureSize, renderTextureSize, 0, source.format);
-        //modelWithOutline.antiAliasing = 0;
         iconMaterial.SetFloat("_OutlineWidth", outlineWidth);
         iconMaterial.SetColor("_OutlineColor", Color.black);
         iconMaterial.SetFloat("_ExtendMask", 0.0f);
         Graphics.Blit(source, modelWithOutline, iconMaterial, writeOutline);
-
 
         iconMaterial.SetColor("_BackgroundColor", backgroundColor);
         iconMaterial.SetTexture("_LightRays", lightRaysTexture);
@@ -140,10 +125,23 @@ public class IconRenderer : MonoBehaviour
         iconMaterial.SetColor("_GlowColor", glowColor);
         
         Graphics.Blit(backgroundDirtTexture, destination, iconMaterial, compositePass);
-        
-       
         RenderTexture.ReleaseTemporary(cSource);
         RenderTexture.ReleaseTemporary(modelWithOutline);
 
+    }
+}
+
+
+[CustomEditor(typeof(IconRenderer))]
+public class IconRendererEditor : Editor
+{
+    public override void OnInspectorGUI()
+    {
+        DrawDefaultInspector();
+        IconRenderer t = (IconRenderer)target;
+        if (GUILayout.Button("Render"))
+        {
+            t.Render();
+        }
     }
 }

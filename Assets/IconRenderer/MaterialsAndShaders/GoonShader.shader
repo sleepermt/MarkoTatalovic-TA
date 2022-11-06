@@ -117,24 +117,6 @@ Shader "Unlit/GoonShader"
                 return max(0.0, pow((dot(lightVector, normal) + w), _SubsurfacePower) / (1.0 + w));
             }
 
-            // float3 rgb2hsv(float3 c)
-            // {
-            //     float4 K = float4(0.0, -1.0 / 3.0, 2.0 / 3.0, -1.0);
-            //     float4 p = lerp(float4(c.bg, K.wz), float4(c.gb, K.xy), step(c.b, c.g));
-            //     float4 q = lerp(float4(p.xyw, c.r), float4(c.r, p.yzx), step(p.x, c.r));
-
-            //     float d = q.x - min(q.w, q.y);
-            //     float e = 1.0e-10;
-            //     return float3(abs(q.z + (q.w - q.y) / (6.0 * d + e)), d / (q.x + e), q.x);
-            // }
-
-            // float3 hsv2rgb(float3 c)
-            // {
-            //     float4 K = float4(1.0, 2.0 / 3.0, 1.0 / 3.0, 3.0);
-            //     float3 p = abs(frac(c.xxx + K.xyz) * 6.0 - K.www);
-            //     return c.z * lerp(K.xxx, clamp(p - K.xxx, 0.0, 1.0), c.y);
-            // }
-
             fixed4 frag (v2f i, fixed facing : VFACE) : SV_Target
             {
                 float3 worldNormal;
@@ -159,20 +141,11 @@ Shader "Unlit/GoonShader"
                 worldNormal = normalize(worldNormal);
 
                 float4 col = float4(0.0, 0.0, 0.0, 1.0);
-
                 float3 lightDir = _WorldSpaceLightPos0.xyz;
                 float NdotL = max(0.0, dot(worldNormal, lightDir));
-
                 float3 viewDir = normalize(i.viewDir);
-                //col += I  * _PrimarySubsurfaceColor + saturate(c * 2.0f - 1.0f) * _PrimarySubsurfaceColor * 0.5f;
-                //col = float4(viewDir, 1.0);
-                // apply fog
-
                 float3 H = normalize(lightDir + viewDir);
-
-                //Intensity of the specular light
                 float NdotH = dot(worldNormal, H);
-               
 
                 float w = wrapDiffuse(worldNormal, lightDir, _SubsurfaceScale ) ;
                 #ifdef SECONDARY_COLOR
@@ -190,10 +163,6 @@ Shader "Unlit/GoonShader"
                     float intensity = pow(saturate(NdotH), 15.0);
                 #endif
 
-                // float3 a = rgb2hsv(col.rgb);
-                // a.x += (tex2D(_HSV, i.uv) * 2.0 - 1.0) * 0.8f;
-                // col.rgb = hsv2rgb(a);
-                
                 col += intensity * _SpecularColor * _SpecularPower;
                 col *= saturate(curvature * 2.0) * ao;
                 col += max(0.0, (1.0 - dot(viewDir, worldNormal) * 2)) * .3 * _RimColor;
