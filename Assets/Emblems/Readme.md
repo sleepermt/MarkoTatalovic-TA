@@ -17,7 +17,7 @@ Emblem elements like shield, symbol and banner shape are read from texture array
 https://user-images.githubusercontent.com/16105403/200170379-11d9d77b-212e-421b-9d8a-62bd7950c7bf.mp4
 
 Texture arrays hold signed distance field (SDF) textures for each element. SDF texture are genereated in Photoshop with stroke effect.
-Indexing of the texture array (and colors, flagschems etc.) for the canvas variant is done by writing the index values into vertex attributes, namely into additional UV channels.
+Indexing of the texture array (and colors, flagschems etc.) for the canvas variant is done by writing the index values into vertex attributes, namely into additional UV channels. Some of the texture arrays like one for the banner use different color RG channels to store back and front to achieve layered effect.
 
 ```
 SetIndexAsUV.cs
