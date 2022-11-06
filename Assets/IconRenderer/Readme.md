@@ -16,7 +16,7 @@ https://user-images.githubusercontent.com/16105403/200177016-42b099e7-5d4f-43f6-
 
 Tool made for rendering of the icons for the game. It uses postprocessing effects to render the icons, and then saves them to the disk. Original tool goes through all the heroes/items instantiates them, loads materials, and renders them. This version is what i was able to extract from the original tool.
 
-Some of the icons from our game rendered with this tool:
+Some of the icons from the game rendered with this tool:
 
 ![IC_W_Sword_0](https://user-images.githubusercontent.com/16105403/200177091-52ad1f5d-a6ad-46ea-9e70-83783009eb1a.png)
 ![IC_W_Sword_1](https://user-images.githubusercontent.com/16105403/200177096-704169ba-f727-4130-8cc0-da0665de8782.png)
