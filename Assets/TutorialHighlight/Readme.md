@@ -2,7 +2,7 @@
 
 Scene: Emblems.unity
 
-Note: Note: Please set the display resolution in Game preview window to 2048x2048 so both mesh and canvas emblems are visible. On the left side are mesh emblems, on the right side are canvas emblems. Tutorial Highlight effect works on both.
+Note: Please set the display resolution in Game preview window to 2048x2048 so both mesh and canvas emblems are visible. On the left side are mesh emblems, on the right side are canvas emblems. Tutorial Highlight effect works on both.
 
 
 https://user-images.githubusercontent.com/16105403/200173718-8468f169-b622-4495-bb7e-32d30cfa92f3.mp4
