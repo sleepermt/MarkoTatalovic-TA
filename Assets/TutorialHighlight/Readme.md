@@ -44,7 +44,7 @@ static public void SetPositionAndSize(Bounds bounds)
 ## How it works:
 
 The effect is achived by using a shader that renders a 2D SDF box into quad that covers the whole screen.
-For the line sweep effect the shader calculates perimiter of the box, scales the new 2D SDF coordinates by the perimiter length, and makes the time offset proportional to perimiter length to get same sweep speed for all sizes of the box.
+For the line sweep effect the shader calculates perimiter of the box, scales the distance field by the perimiter length, and makes the time offset proportional to perimiter length to get same sweep speed for all sizes of the box.
 
 
 
