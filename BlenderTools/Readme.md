@@ -23,7 +23,7 @@ This addon allows artist to easily setup isometric rendering of each building we
 ![image](https://user-images.githubusercontent.com/16105403/200318975-56193d02-6b00-4d9a-bdfe-9623745adf8c.png)
 
 
-There is an Controller object that artist is using to frame the building. Once artist sets the controller's position and scale, addon finds the closest power of four size based on the controller size and pixel per unit property.
+There is an Controller object that artist is using to frame the building. Once artist sets the controller's position and scale, addon finds the closest power of two size based on the controller size and pixel per unit property.
 
 https://user-images.githubusercontent.com/16105403/200319793-536b1773-a277-4483-878a-e533b2d6a166.mp4
 
