@@ -12,7 +12,7 @@ This addon allows artist to load character models from the unity project. It rea
 
 <img src="https://user-images.githubusercontent.com/16105403/200318062-360eb945-e2ec-4eec-a27f-4d892d9a68b1.png" width=20% height = 20%>
 
-Once artist setup the scene, he save the camera position for each character type. Then he can render all characters in one click. Result is saved as sprite sheet.
+Once artist setup the scene, he can save the camera position for each character type. Then he can render all characters in one click. Result is saved as sprite sheet.
 
 <img src="https://user-images.githubusercontent.com/16105403/200318413-e7dfe66e-2997-4dc1-83d8-19b1cb89c0f2.png" width=45% height = 45%>
 
