@@ -6,5 +6,6 @@
 4. [Character and Items](Assets/CharacterAndItems/Readme.md)
 5. [Icon Renderer](Assets/IconRenderer/Readme.md)
 6. [3DArt](3DArt/Readme.md)
+7. [Blender Tools](BlenderTools/Readme.md
 
 
