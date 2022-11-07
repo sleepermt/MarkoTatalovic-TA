@@ -2,7 +2,7 @@
 
 I have developed many tools for Blender. Some of them are listed below.
 
-Note almost all addons are created for internal use. I've provided code examples for them, but note that most of the paths for saving and loading data are hard coded, or are dependant on external libraries not provided by blender's python distribution and for our purposes we have older edited versions of blender.
+Note almost all addons are created for internal use. I've provided code examples for them, but note that for most of the paths for saving and loading data are hard coded, or are dependant on external libraries not provided by blender's python distribution and for our purposes we have older edited versions of blender.
 
 ## Character Icon Render
 
