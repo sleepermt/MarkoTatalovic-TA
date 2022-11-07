@@ -24,6 +24,7 @@ This addon allows artist to easily setup isometric rendering of each building we
 
 
 There is an Controller object that artist is using to frame the building. Once artist sets the controller's position and scale, addon finds the closest power of four size based on the controller size and pixel per unit property.
+
 https://user-images.githubusercontent.com/16105403/200319793-536b1773-a277-4483-878a-e533b2d6a166.mp4
 
 Artist can render each building separately or all buildings in one collection. There's additional option to render out Z pass used in building upgrade effect. 
