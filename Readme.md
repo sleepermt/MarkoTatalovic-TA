@@ -1,6 +1,6 @@
 # Marko Tatalovic TA
 
-Note: When reviewing unity project please set the game window display size to once recommender in each Readme.md
+Note: When reviewing unity project please set the game window display size to one recommender in each Readme.md
 
 
 1. [SDF Emblems](Assets/Emblems/Readme.md)
